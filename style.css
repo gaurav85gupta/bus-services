@@ -1011,6 +1011,37 @@ body.menu-open { overflow: hidden; }
   .footer__col--wide { grid-column: span 2; }
 
   h2 { font-size: clamp(1.7rem, 5vw, 2.3rem); }
+
+  /* ---- Center text on mobile ---- */
+  .hero__content { text-align: center; margin: 0 auto; }
+  .hero__eyebrow { justify-content: center; }
+  .hero__cta { justify-content: center; }
+  .hero__sub { margin-left: auto; margin-right: auto; }
+
+  .about__text { text-align: center; }
+  .about__text .eyebrow { justify-content: center; }
+  .about__points { align-items: center; }
+  .about__points li { padding-left: 0; text-align: center; }
+  .about__points li::before { display: none; }
+
+  .app__text { text-align: center; }
+  .app__text .eyebrow { justify-content: center; }
+  .app__features { align-items: center; }
+  .app__features li { padding-left: 0; text-align: center; }
+  .app__features li::before { display: none; }
+  .app__stores { justify-content: center; }
+
+  .why-card, .route-card, .fleet-card__body, .testi-card { text-align: center; }
+  .why-card__icon { margin-left: auto; margin-right: auto; }
+  .route-card__top, .route-card__bottom { justify-content: center; flex-wrap: wrap; }
+  .route-card__cities { justify-content: center; }
+
+  .footer__brand { text-align: center; }
+  .footer__brand .nav__brand { justify-content: center; }
+  .footer__social { justify-content: center; }
+  .footer__col { text-align: center; align-items: center; }
+  .footer__newsletter { justify-content: center; }
+  .footer__bottom-inner { text-align: center; align-items: center; }
 }
 
 /* ---------------------------------------------------------------------
