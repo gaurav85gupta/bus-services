@@ -107,8 +107,11 @@ function initNav() {
     });
 
     // Close the menu automatically if the viewport grows back into desktop size
+    // (must match the 992px breakpoint where CSS switches the nav back to the
+    // full inline links / actions layout, or the scroll-lock + aria state can
+    // get stuck open behind a nav that's no longer rendering the hamburger).
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 860 && burger.classList.contains('is-open')) closeMenu();
+      if (window.innerWidth > 992 && burger.classList.contains('is-open')) closeMenu();
     });
   }
 }
@@ -151,7 +154,7 @@ function initHeroParticles() {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduceMotion) return;
 
-  const COUNT = window.innerWidth < 760 ? 14 : 28;
+  const COUNT = window.innerWidth < 768 ? 14 : 28;
   const frag = document.createDocumentFragment();
 
   for (let i = 0; i < COUNT; i++) {
